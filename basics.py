@@ -1,6 +1,9 @@
 #variable = a container for a value (string, integer, float, boolean)
 
 #strings
+from calendar import Day
+
+
 first_name = "Sai"
 food = "Burger"
 email = "kurapatilakshmisaikumar@gmail.com"
@@ -80,10 +83,18 @@ gpa +=1
 
 #exercise 2 shopping cart program
 
-item = input("what item would you like to buy: ")
-price = float(input("what is the price?: "))
-quantity = int(input("how many would you like to buy?: "))
-total = price*quantity
-print(f"you have bought {quantity} x {item}/s")
-print(f"your total bill: {total}")
-      
+#item = input("what item would you like to buy: ")
+#price = float(input("what is the price?: "))
+#quantity = int(input("how many would you like to buy?: "))
+#total = price*quantity
+#print(f"you have bought {quantity} x {item}/s")
+#print(f"your total bill: {total}")
+
+
+#exercise 3 - trip planning
+
+Day1 = input("what is our first destination?: ")
+Day2 = input("what is our second destination?: ")
+Day3 = input("what is our third destination?: ")
+Day4 = input("what is our fourth destination?: ")
+print("My Trip planning:  ")
