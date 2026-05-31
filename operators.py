@@ -50,5 +50,28 @@ import math
 #    print("here is your food")
 #else:
 #    print("okay, we will have next time ")
+
+
+
+#python calculator 
+
+operator = input("enter a operator (+,-,*,/)")
+num1 = float(input("enter first number: "))
+num2 = float(input("enter second number:"))
+print(f"you entered: {num1} {operator} {num2}")
+if operator == "+":
+    result = num1 + num2
+    print(f"the addtion value is : {result}")
+elif operator == "-":
+    result = num1 - num2
+    print(f"the subtraction value is : {result}")
+elif operator == "*":
+    result = num1 *num2
+    print(f"the multiplication value is : {result}")
+else:
+    result =num1 / num2
+    print(f"the division value is : {result}")
+    
+
  
     
