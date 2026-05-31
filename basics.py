@@ -93,8 +93,24 @@ gpa +=1
 
 #exercise 3 - trip planning
 
-Day1 = input("what is our first destination?: ")
-Day2 = input("what is our second destination?: ")
-Day3 = input("what is our third destination?: ")
-Day4 = input("what is our fourth destination?: ")
-print("My Trip planning:  ")
+#Day1 = input("what is our first destination?: ")
+#Day2 = input("what is our second destination?: ")
+#Day3 = input("what is our third destination?: ")
+#Day4 = input("what is our fourth destination?: ")
+#print("My Trip planning:  ")
+
+
+
+#Madlibs game
+#it is a word game where you fill in the blanks to create a funny story
+
+adjective1 = input("enter a adjective: ")
+noun1 = input("enter a noun (person, place, thing): ")
+adjective2 = input("enter a adjective(description): ")
+verb1 = input("enter a verb that ending with 'ing': ")
+adjective3 = input("enter a adjective: ")
+
+print(f"TOday i went to a {adjective1} zoo.")
+print(f"In a exhibit, i saw a {noun1}")
+print(f"{noun1} was {adjective2} and {verb1}")
+print(f"i was {adjective3}!")
