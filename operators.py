@@ -105,4 +105,21 @@ import math
     
 #print(f"the temperature is : {round(temp,2)} {unit}")
  
+#logic operators = evaluate multiple conditions at the same time
+                   #or = at least one condition is true
+                   #and = all conditions must be true   
+                   #not = reverses the result, returns false if the result is true
+ 
+temp = 25
+#is_raining = True
+is_sunny = True
+
+#if temp > 20 and is_sunny:
+ #   print("it is hot outside ")
+#    print("use sunscreen and wear a hat") 
+#else:
+#    print("it is cold outside ")
+#    print("wear a jacket and wear cotton clothes to warm up")
+ 
+ 
     
