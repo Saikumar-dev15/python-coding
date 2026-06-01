@@ -144,4 +144,4 @@ fruit = ["apple" , "orange", "banana" , "grape" , "apple"]
 #print(len(fruit))
 
 #print(fruit.index("apple"))
-
+print(fruit.count("apple"))
