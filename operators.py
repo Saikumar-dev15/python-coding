@@ -122,4 +122,23 @@ is_sunny = True
 #    print("wear a jacket and wear cotton clothes to warm up")
  
  
+ #conditional expressions = A one line if else statement that evaluates something based on a condition being true or false(ternary operator)
+ #                           print or assign one of the two values based on a condition
+                           
+                           
+num =5
+a = 6
+b=7
+age = 25
+user_role = "guest"
+
+#print("positive " if num>0 else "negative   ")
+#result = "even" if num%2==0 else "odd"
+#max_num =  a if a>b else b
+#min_num = a if a<b else b
+#status = "Adult" if age >=18 else "Minor"
+#role = "Guest" if user_role =="guest" else "Admin"
+#print(role)
+
+                   
     
