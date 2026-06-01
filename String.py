@@ -41,3 +41,32 @@
 ##print(credit_number[5:])
 #print(credit_number[-1])
 #print(credit_number[::3])  #print every 3rd character in the string
+
+
+#format specifiers = {value:flags} format a value based on what flags you use
+#.(number)f = round to that mant decimal places(fixed point)
+#:(number) =allocate that many spaces
+#:03 = allocate and zero pad that many spaces
+# :< = left align
+# :> = right align
+# :^ = center align
+# :+ = show the sign of a numberpositive  
+# := = show the sign of a number at the beginning of the output
+# :  = show a space before positive numbers and a minus sign before negative numbers
+# :, = comma separator
+
+
+price1 = 3786.1415
+price2 = -93748.456
+price3 = 12897.34
+
+#print(f"price1: {price1:.3f}")  #round to 3 decimal places
+#print(f"price1: {price1:10}")   #allocate 10 spaces for the price1
+#print(f"price1: {price1:<10}")
+#print(f"price1: {price1:>10}")   
+#print(f"price1: {price1:+}")    #show the sign of the number
+#print(f"price1: {price1: }")
+#print(f"price1: {price1:,}")
+print(f"price1: {price1:+,.2f}")   #show the sign of the number, round to 2 decimal places and use comma as a thousand separator
+print(f"price2: {price2:+,.2f}")   #show the sign of the number, round to 2 decimal places and use comma as a thousand separator
+print(f"price3: {price3:+,.2f}")   #show the sign of the number, round to 2 decimal places and use comma as a thousand separator
