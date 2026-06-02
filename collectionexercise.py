@@ -61,55 +61,93 @@
 
 #play quizz game
 
-questions = ("How many elements are in the periodic table?: ",
-              "which  animal lays larger eggs?:  ",
-              "what is the most abundant gas in earth's atmosphere?: ",
-              "how many bones are in the human body?: ",
-              "which planet in the solar system is the hottest?: ")
+#questions = ("How many elements are in the periodic table?: ",
+#              "which  animal lays larger eggs?:  ",
+#              "what is the most abundant gas in earth's atmosphere?: ",
+#              "how many bones are in the human body?: ",
+#              "which planet in the solar system is the hottest?: ")
 
-options = (("A.115 ", "B.116 ", "C.117 ", "D.118 "),
-           ("A. whale", "B.crocodile ", "C. Ostrich ", "D. hen "),
-           ("A. Nitrogen ", "B. Oxygen ", "C. Co2 ", "D. hydrogen "),
-           ("A. 208", "B.207 ", "C.206 ", "D.209 "),
-           ("A.Mercury ", "B.Mars ", "C.earth ", "D.venus "))
+#options = (("A.115 ", "B.116 ", "C.117 ", "D.118 "),
+#           ("A. whale", "B.crocodile ", "C. Ostrich ", "D. hen "),
+#           ("A. Nitrogen ", "B. Oxygen ", "C. Co2 ", "D. hydrogen "),
+#           ("A. 208", "B.207 ", "C.206 ", "D.209 "),
+#           ("A.Mercury ", "B.Mars ", "C.earth ", "D.venus "))
 
-answers = ("D", "C", "A", "C", "B")
-guesses = []
-score = 0
-question_num = 0
+#answers = ("D", "C", "A", "C", "B")
+#guesses = []
+#score = 0
+#question_num = 0
 
-for question in questions:
-    print("-------------------")
-    print(question)
-    for option in options[question_num]:
-        print(option)
+#for question in questions:
+#    print("-------------------")
+#    print(question)
+#    for option in options[question_num]:         # options will display according to our question number.
+#        print(option)
         
-    guess = input("Enter (A,B,C,D):  ").upper() 
-    guesses.append(guess)
-    if guess == answers[question_num]:
-        score +=1
-        print("CORRECT!")
-    else:
-        print("INCORRECT")
-        print(f"{answers[question_num]} is the correct answer")
-    question_num +=1    
+
+#    guess = input("Enter (A,B,C,D):  ").upper()     
+#    guesses.append(guess)                          
+#    if guess == answers[question_num]:           
+#        score +=1
+#        print("CORRECT!")
+#    else:
+#        print("INCORRECT")
+#        print(f"{answers[question_num]} is the correct answer")
+#    question_num +=1    
     
     
-print("----------------------")
-print("      RESULTS         ")
-print("----------------------")
+#print("----------------------")
+#print("      RESULTS         ")
+#print("----------------------")
 
-print("answers:  ", end=" ")
-for answer in answers:
-    print(answer, end=" ")
-print()
+#print("answers:  ", end=" ")
+#for answer in answers:
+#    print(answer, end=" ")
+#print()
 
 
-print("guesses:  ", end=" ")
-for guess in guesses:
-    print(guess, end=" ")
-print()
+#print("guesses:  ", end=" ")
+#for guess in guesses:
+#    print(guess, end=" ")
+#print()
 
-score = score/ len(questions)*100
+#score = score/ len(questions)*100
 
-print(f"Your final score : {score}%")
+#print(f"Your final score : {score}%")
+
+
+
+
+#Dictionary = a collection of {key: value} pairs
+#             ordered and changeable. No duplicates
+
+capitals = {"USA": "Washington D.C" ,
+            "INDIA": "New Delhi",
+            "China": "Beijing",
+            "RUSSIA": "Moscow"}
+
+#print(dir(capitals))
+#print(help(capitals))
+#print(capitals.get("USA"))
+
+#if capitals.get("INDIA"):
+#    print("THAT CAPITAL  EXISIT")
+#else:
+#    print("That capital is doesn't exist")
+
+#capitals.update({"Germany": "Berlin"})
+#capitals.update({"USA": "Detroit"})
+#capitals.pop("China")
+#captials.clear()
+#print(capitals)
+#keys = capitals.keys()
+#for key in capitals.keys():
+#    print(key)
+
+#values = capitals.values()
+#for value in capitals.values():
+#    print(value)
+
+items = capitals.items()
+for key, value in capitals.items():
+    print(f"{key}: {value}")
