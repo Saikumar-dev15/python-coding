@@ -148,6 +148,38 @@ capitals = {"USA": "Washington D.C" ,
 #for value in capitals.values():
 #    print(value)
 
-items = capitals.items()
-for key, value in capitals.items():
-    print(f"{key}: {value}")
+#items = capitals.items()
+#for key, value in capitals.items():
+#    print(f"{key}: {value}")
+    
+    
+#concession stand program
+
+menu = {"pizza": 3.00,
+        "nachos":4.50,
+        "popcorn": 6.00,
+        "fries":2.50,
+        "chips":1.00,
+        "soda":3.00,
+        "lemonade":4.25}
+     
+cart = []
+total = 0
+
+print("----------MENU----------")
+for key, value in menu.items():
+    print(f"{key}: ${value:.2f}")
+print("--------------------------------")
+
+while True:
+    food=input("select the item (q or quite): ").lower()         #lower() will convert all the capital to small letters.
+    if food == "q":
+        break
+    elif menu.get(food) is not None:          #this will run if the condition is != q and check the menu list and add in cart.
+        cart.append(food)
+        
+for food in cart:
+    total += menu.get(food)                  #it will finalise the bill of our food.
+    print(food, end=" ")
+print()
+print(f"Total is: {total: .2f}")
