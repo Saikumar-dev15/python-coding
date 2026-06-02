@@ -15,36 +15,77 @@ high = 100
 
 
 #python number guessing game 
-import random 
+#import random 
 
-lowest_num = 1
-highest_num = 100
-answer = random.randint(lowest_num , highest_num)
-guesses = 0
-is_running = True
+#lowest_num = 1
+#highest_num = 100
+#answer = random.randint(lowest_num , highest_num)
+#guesses = 0
+#is_running = True
 
-print("Python number Guessing game")
-print(f"select a number between {lowest_num} and {highest_num}")
+#print("Python number Guessing game")
+#print(f"select a number between {lowest_num} and {highest_num}")
 
-while is_running:
+#while is_running:
     
-    guess = input("Enter your guess:  ")
+#    guess = input("Enter your guess:  ")
     
-    if guess.isdigit():
-        guess = int(guess)                     # it will convert str to int.
-        guesses += 1                           #here guess count will be increased.
+#    if guess.isdigit():
+#        guess = int(guess)                     # it will convert str to int.
+#        guesses += 1                           #here guess count will be increased.
          
-        if guess < lowest_num or guess > highest_num:                               
-             print("That number is out of range")
-             print(f"please select a number blw {lowest_num} and {highest_num}")
-        elif guess < answer :
-            print("Too low! try again!")
-        elif guess > answer:
-            print("Too High! Try again!")
-        else:
-            print(f"correct! the answer was {answer}")
-            print(f"number of guesses: {guesses}")
-            is_running = False                                 #to exit the loop.
+#        if guess < lowest_num or guess > highest_num:                               
+#             print("That number is out of range")
+#             print(f"please select a number blw {lowest_num} and {highest_num}")
+#        elif guess < answer :
+#            print("Too low! try again!")
+#        elif guess > answer:
+#            print("Too High! Try again!")
+#        else:
+#            print(f"correct! the answer was {answer}")
+#            print(f"number of guesses: {guesses}")
+#            is_running = False                                 #to exit the loop.
+#    else:
+#        print("Invalid number")
+#        print(f"please select a number blw {lowest_num} and {highest_num}")
+
+
+
+
+
+#ROCK PAPER SCISSORS GAME
+
+import random
+
+options = ("rock", "paper", "scissors")
+player = None
+computer = random.choice(options)
+running = True
+
+
+def new_func():
+    if not input("play again? (y/n): ").lower() == "y":
+        running = False
+
+while running:
+    while player not in options:
+        player = input("Enter a choice (rock, paper, scissors): ")
+
+    print(f"player: {player}")
+    print(f"Computer: {computer}")
+
+    if player == computer:
+        print("Tie")
+
+    elif player == "rock" and computer == "scissors":
+        print("you win")
+    elif player == "paper"  and computer == "rock":
+        print("you win")
+    elif player == "scissors" and computer == "paper":
+        print("you win")
     else:
-        print("Invalid number")
-        print(f"please select a number blw {lowest_num} and {highest_num}")
+        print("you loose")
+        
+    new_func()
+print("Thanks for playing!")
+
