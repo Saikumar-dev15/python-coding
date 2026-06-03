@@ -55,37 +55,110 @@ high = 100
 
 #ROCK PAPER SCISSORS GAME
 
+#import random
+
+#options = ("rock", "paper", "scissors")
+#player = None
+#computer = random.choice(options)
+#running = True
+
+
+#def new_func():
+#    if not input("play again? (y/n): ").lower() == "y":
+#        running = False
+
+#while running:
+#    while player not in options:
+#        player = input("Enter a choice (rock, paper, scissors): ")
+
+#    print(f"player: {player}")
+#    print(f"Computer: {computer}")
+
+#    if player == computer:
+#        print("Tie")
+
+##    elif player == "rock" and computer == "scissors":
+#        print("you win")
+#    elif player == "paper"  and computer == "rock":
+#        print("you win")
+#    elif player == "scissors" and computer == "paper":
+#        print("you win")
+#    else:
+#        print("you loose")
+        
+#    new_func()
+#print("Thanks for playing!")
+
+
+
+
+
+#DICE ROLL PROGRAM
+
 import random
 
-options = ("rock", "paper", "scissors")
-player = None
-computer = random.choice(options)
-running = True
+#print("\u25CF \u250C \u2500 \u2510 \u2502 \u2514 \u2518")
+
+#● ┌ ─ ┐ │ └ ┘
 
 
-def new_func():
-    if not input("play again? (y/n): ").lower() == "y":
-        running = False
+"┌───────────────┐"
+"│               │"
+"│               │"
+"│               │"
+"└───────────────┘"
 
-while running:
-    while player not in options:
-        player = input("Enter a choice (rock, paper, scissors): ")
+dice_art = {
+    1: ("┌───────────────┐",
+        "│               │",
+        "│       ●       │",
+        "│               │",
+        "└───────────────┘"),
+    2: ("┌───────────────┐",
+        "│   ●           │",
+        "│               │",
+        "│          ●    │",
+        "└───────────────┘"),
+    3: ("┌───────────────┐",
+        "│   ●           │",
+        "│       ●       │",
+        "│           ●   │",
+        "└───────────────┘"),
+    4: ("┌───────────────┐",
+        "│   ●       ●   │",
+        "│               │",
+        "│   ●       ●   │",
+        "└───────────────┘"),
+    5: ("┌───────────────┐",
+        "│ ●         ●   │",
+        "│       ●       │",
+        "│ ●          ●  │",
+        "└───────────────┘"),
+    6: ("┌───────────────┐",
+        "│  ●    ●     ● │",
+        "│               │",
+        "│  ●     ●    ● │",
+        "└───────────────┘")    
+}
 
-    print(f"player: {player}")
-    print(f"Computer: {computer}")
+dice = []
+total = 0
+num_of_dices = int(input("How many dices?: "))
 
-    if player == computer:
-        print("Tie")
+for die in range(num_of_dices):
+    dice.append(random.randint(1,6))
+    
+#for die in range(num_of_dices):
+#    for  line in dice_art.get(dice[die]):                           # To get the picture of the every dice             #  
+#        print(line)
+ 
+for line in range(5):                                               # Total range 1 to 6 = 5 index
+    for die in dice:
+        print(dice_art.get(die)[line], end=" ")                     #it will print all dices in single row....... 
+    print()    
+    
+for die in dice:
+    total += die
+print(f"Total number : {total}")
 
-    elif player == "rock" and computer == "scissors":
-        print("you win")
-    elif player == "paper"  and computer == "rock":
-        print("you win")
-    elif player == "scissors" and computer == "paper":
-        print("you win")
-    else:
-        print("you loose")
-        
-    new_func()
-print("Thanks for playing!")
 
