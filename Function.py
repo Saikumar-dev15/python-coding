@@ -91,7 +91,53 @@
 
 
 
-def get_phone(country, area, first, last):
-    return f"{country}-{area}-{first}-{last}"
-phone_num = get_phone(country=1, area=123, first=456, last=7890)
-print(phone_num)
+#def get_phone(country, area, first, last):
+#    return f"{country}-{area}-{first}-{last}"
+#phone_num = get_phone(country=1, area=123, first=456, last=7890)
+#print(phone_num)
+
+
+
+#ARBITRARY ARGUMENTS
+# *args = allows you to pass multiple non-key  arguments
+# **kwargs = allow you to pass multiple keyword- arguments
+
+#def add(*args):
+#    total =0 
+#    for arg in args:
+#        total += arg
+#    return total
+#print(add(1,2,4,5))
+
+#def display_name(*args):
+#    for arg in args:
+#        print(arg, end=" ")
+
+#display_name("Mr.", "Sai", "Kumar", "choudary")
+
+
+# **kwargs
+#def print_address(**kwargs):
+#        for value in kwargs.values():
+#            print(value)
+            
+#print_address(street="123 fake st.",
+#              city="Hydrabad",
+#              state="Telangana",
+#              pincode="508218")
+
+
+#exercise on both *args and **kwargs
+def shipping_label(*args, **kwargs):
+    for arg in args:
+       print(arg, end=" ")
+    for value in kwargs.values():
+       print(value, end=" ")
+    
+shipping_label("Mr.", "Sai", "Kumar", "choudary",
+               street="123 fake st.",
+               city="Hydrabad",
+               state="Telangana",
+               pincode="508218")
+
+    
