@@ -59,6 +59,39 @@
 #                    1.position 2.Default 3. keyword 4. arbitary
 
 
-def net_price(list_price, discount, tax):
-    return list_price * (1- discount)* (1 + tax)
-print(net_price(500, 0, 0.05))
+#POSITION
+#def net_price(list_price, discount, tax):
+#    return list_price * (1- discount)* (1 + tax)
+#print(net_price(500, 0, 0.05))
+
+
+#DEFAULT
+#import time
+
+#def count(end, start=0):                            #non-default argument follows default argument..
+#    for x in range(start, end+1):                 # it will increase the count numbers
+#        print(x)
+#        time.sleep(1)
+#    print("DONE..!!")
+
+#count(30,15)
+
+
+
+#KEYWORD
+#Keyword arguments = an arguments preceded by an identifier
+#                    helps with readability 
+#                    order of arguments doesn't matter
+
+
+#def hello(greeting, title, first, last):
+#    print(f"{greeting} {title}{first} {last}")
+    
+#hello("hello","Mr.",last="Squarepants",first="Spongebob",)
+
+
+
+def get_phone(country, area, first, last):
+    return f"{country}-{area}-{first}-{last}"
+phone_num = get_phone(country=1, area=123, first=456, last=7890)
+print(phone_num)
