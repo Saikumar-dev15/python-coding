@@ -102,3 +102,6 @@ def is_weekend(day):
 print(is_weekend("sunday"))
 
 
+
+
+
