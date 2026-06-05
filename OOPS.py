@@ -13,19 +13,13 @@ class Car:
         self.for_sale = for_sale
 
     def drive(self):
-        print("You drive the car {self.model}")
+        print(f"You drive the car {self.color}{self.model}")
 
     def stop(self):
-        print("You stop the car {self.model}")
-       
-car1 = Car("Mustang", 2026, "Orange", False)
-car2 = Car("BMW", 2025, "Orange", True)
-
-#print(car2.model)
-#print(car2.year)
-#print(car2.color)
-#print(car2.for_sale)
+        print(f"You stop the {self.color}{self.model}")
         
-car1.drive() 
-car1.stop()
+    def describe(self):
+        print(f"{self.year} {self.color} {self.model}")
+       
+
  
