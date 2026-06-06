@@ -59,15 +59,15 @@ func2()
 
 
 
-#def favourite_food(food):
-#    print(f"your favourite is {food} ")
+def favourite_food(food):
+    print(f"your favourite is {food} ")
 
-#def main():
-#    print("this is script")
- #   favourite_food("Pizza")
-#    print("GoodBye!....")
+def main():
+    print("this is script")
+    favourite_food("Pizza")
+    print("GoodBye!....")
     
-#if __name__ ==  '__main__':
-#    main()
+if __name__ ==  '__main__':
+    main()
           
 
