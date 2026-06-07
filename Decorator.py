@@ -81,7 +81,7 @@ def add_fudge(func):
 @add_fudge
 
 def get_ice_cream(flavour):
-    print("Here is your {flavour} ice cream🧁")
+    print(f"Here is your {flavour} ice cream🧁")
     
 get_ice_cream("Vanilla")
 
