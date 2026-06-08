@@ -28,23 +28,50 @@
 
 #empolyees = ["Saikumar", "RajaPriya", "Siri", "Anessa"]                                #for txt.file purpose
 
-import json
-empolyees = {
-    "Name" : "Saikumar",
-    "age"  : 30,
-    "Role" : "Python developer"
-}
+#import json
+#empolyees = {
+#    "Name" : "Saikumar",
+#    "age"  : 30,
+#    "Role" : "Python developer"
+#}
 
-file_path = "C:/Users/LAXMI SAI KUMAR/OneDrive/Documents/Desktop/Output.json"
+#file_path = "C:/Users/LAXMI SAI KUMAR/OneDrive/Documents/Desktop/Output.json"
 
-try:
-    with open(file_path, "w") as file:
+#try:
+#    with open(file_path, "w") as file:
+
 #        for empolyee in empolyees:                            # for txtfile it should be iterates
 #            file.write(empolyee + " ")
-            json.dump(empolyees , file, indent=4)                                         #dump() method will convert our dictnory to json String
-            print(f"json file '{file_path}' was created")
+#            json.dump(empolyees , file, indent=4)                                         #dump() method will convert our dictnory to json String
+#            print(f"json file '{file_path}' was created")
             
-except FileExistsError:
-    print("file already exists!...")
+#except FileExistsError:
+#    print("file already exists!...")
+
+
+
+import json
+import csv
+
+employees = [["Name", "Age", "Job"],
+             ["Saikumar" , 19, "Pythondev"],
+             ["Shiva", 21, "Cybersecurity"],
+             ["Jayadeep", 19, "AIML"]]
+
+file_path = "C:/Users/LAXMI SAI KUMAR/OneDrive/Documents/Desktop/Output.csv"
+
+try:
+    with open(file_path, "w", newline= "") as file:
+        writer = csv.writer(file)
+        for row in employees:
+            writer.writerow(row)
+        print(f"csv file '{file_path}' was created")
+
+except Exception:
+    print("That file already exists!...")
+      
+
+
+
     
     
