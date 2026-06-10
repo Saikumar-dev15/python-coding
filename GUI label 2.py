@@ -25,9 +25,9 @@ class MainWindow(QMainWindow):
         #label.setAlignment(Qt.AlignRight)             #horizontally right
         #label.setAlignment(Qt.AlignHCenter)             #horizontally center
                
-        #label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)         
-        #label.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
-        label.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
+        #label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)         #HCenter & top
+        #label.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)      #HCenter & Bottom
+        label.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)      #hcenter & vcenter
         
 def main():
     app = QApplication(sys.argv)
