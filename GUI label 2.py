@@ -1,6 +1,7 @@
 import sys 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
 from PyQt5.QtGui import QFont
+from PyQt5.QtCore import Qt
 
 
 class MainWindow(QMainWindow):
@@ -14,7 +15,19 @@ class MainWindow(QMainWindow):
         label.setGeometry(0,0,500,100)
         label.setStyleSheet("color:blue;"
                             "background-color: #2596be;"
-                            "font-weight = bold")
+                            "font-weight = bold;"
+                            "font-style: italic;"
+                            "text-decoration: underline;")
+        
+        #label.setAlignment(Qt.AlignTop)             #Vertically top
+        #label.setAlignment(Qt.AlignBottom)           #vertically down
+        #label.setAlignment(Qt.AlignVCenter)   
+        #label.setAlignment(Qt.AlignRight)             #horizontally right
+        #label.setAlignment(Qt.AlignHCenter)             #horizontally center
+               
+        #label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)         
+        #label.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        label.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
         
 def main():
     app = QApplication(sys.argv)
