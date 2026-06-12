@@ -17,6 +17,14 @@ class MainWindow(QMainWindow):
                                      "font-family: Arial")
         self.button.setStyleSheet("font-size: 25px;"
                                      "font-family: Arial")
+        self.line_edit.setPlaceholderText("Enter your name")
+        
+        self.button.clicked.connect(self.submit)
+        
+    def submit(self):
+        text = self.line_edit.text()
+        print(f"Hello {text}")
+            
     
 if __name__ == "__main__":
     app = QApplication(sys.argv)
