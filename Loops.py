@@ -145,3 +145,5 @@ fruit = ["apple" , "orange", "banana" , "grape" , "apple"]
 
 #print(fruit.index("apple"))
 print(fruit.count("apple"))
+
+
