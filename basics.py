@@ -110,7 +110,7 @@ adjective2 = input("enter a adjective(description): ")
 verb1 = input("enter a verb that ending with 'ing': ")
 adjective3 = input("enter a adjective: ")
 
-print(f"TOday i went to a {adjective1} zoo.")
+print(f"Today i went to a {adjective1} zoo.")
 print(f"In a exhibit, i saw a {noun1}")
 print(f"{noun1} was {adjective2} and {verb1}")
 print(f"i was {adjective3}!")
