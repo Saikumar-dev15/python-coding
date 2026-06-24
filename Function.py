@@ -128,16 +128,24 @@
 
 
 #exercise on both *args and **kwargs
-def shipping_label(*args, **kwargs):
-    for arg in args:
-       print(arg, end=" ")
-    for value in kwargs.values():
-       print(value, end=" ")
+#def shipping_label(*args, **kwargs):
+#    for arg in args:
+#       print(arg, end=" ")
+#    for value in kwargs.values():
+#       print(value, end=" ")
     
-shipping_label("Mr.", "Sai", "Kumar", "choudary",
-               street="123 fake st.",
-               city="Hydrabad",
-               state="Telangana",
-               pincode="508218")
+#shipping_label("Mr.", "Sai", "Kumar", "choudary",
+#               street="123 fake st.",
+#               city="Hydrabad",
+#               state="Telangana",
+#               pincode="508218")
 
     
+    
+    
+#Tables
+def Table(num):
+   for i in range (1,11):
+      print(f"{num} x {i} = {num*i}")
+      
+Table(27)
