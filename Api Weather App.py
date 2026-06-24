@@ -101,14 +101,13 @@ class WeatherApp(QWidget):
                     
     
         
+        except requests.exceptions.Timeout:
+            self.display_error("Timeout  Error: \nThe request timed out")
         
         except requests.exceptions.RequestException:
             self.display_error("Connection Error: \nCheck your internet connection")
         
-        except requests.exceptions.Timeout:
-            self.display_error("Timeout  Error: \nThe request timed out")
-        
-        except requests.exceptions.ToomanyRedirects:
+        except requests.exceptions.TooManyRedirects:
             self.display_error("Connection Error: \nCheck the URL")
         
         except requests.exceptions.RequestException as req_error:
@@ -127,7 +126,7 @@ class WeatherApp(QWidget):
         temperature_c = temperature_k - 273.15
         temperature_f = (temperature_k * 9/5 ) -459.67
         weather_id = data["weather"][0]["id"]
-        weather_description = data["Weather"][0]["description"]
+        weather_description = data["weather"][0]["description"]
         
         self.temperature_label.setText(f"{temperature_f: .0f}°F")
         self.emoji_label.setText(self.get_weather_emoji(weather_id))
@@ -156,4 +155,9 @@ class WeatherApp(QWidget):
         else:
             return "🌈"
 
-        
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    weather_app = WeatherApp()
+    weather_app.show()
+    sys.exit(app.exec_())
+      
